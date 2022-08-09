@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/backgrou">
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskNameInput"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="43dp"
+        android:hint="@string/task_name_hint" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:ems="10"
+        android:id="@+id/dateInput"
+        android:layout_below="@+id/taskNameInput"
+        android:layout_alignStart="@+id/taskNameInput"
+        android:layout_marginTop="32dp"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_day_button_text"
+        android:id="@+id/setDateButton"
+        android:layout_alignBottom="@+id/dateInput"
+        android:layout_toEndOf="@+id/dateInput" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:ems="10"
+        android:id="@+id/timeInput"
+        android:layout_below="@+id/dateInput"
+        android:layout_alignStart="@+id/taskNameInput"
+        android:layout_marginTop="32dp"
+        android:enabled="true"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_time_button_text"
+        android:id="@+id/setTimeButton"
+        android:layout_alignBottom="@+id/timeInput"
+        android:layout_toEndOf="@+id/timeInput"
+        android:enabled="true"
+        android:clickable="false" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save_task_text"
+        android:id="@+id/add_task_btn"
+        android:layout_marginBottom="121dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/timeInput"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_btn_text"
+        android:id="@+id/delete_task_btn"
+        android:layout_below="@+id/spinner"
+        android:layout_alignEnd="@+id/taskNameInput"/>
+
+    <Spinner
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_above="@+id/add_task_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp"/>
+
+
+</RelativeLayout>
